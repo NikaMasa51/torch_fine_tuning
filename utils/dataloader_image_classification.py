@@ -120,7 +120,6 @@ class PlantDataset(data.Dataset):
             label = img_path[28:32]
 
         # ラベルを数値に変更する
-		[,,,,,,,,,,,]
 
         if label == "Black-grass":
             label = 0
