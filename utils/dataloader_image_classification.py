@@ -64,7 +64,7 @@ def make_datapath_list(phase="train"):
         データへのパスを格納したリスト
     """
 
-    rootpath = "./data/Nonsegmented/"
+    rootpath = "./CLS/"
     target_path = osp.join(rootpath+phase+'/**/*.jpg')
     print(target_path)
 
