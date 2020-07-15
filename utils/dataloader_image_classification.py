@@ -77,7 +77,7 @@ def make_datapath_list(phase="train"):
     return path_list
 
 
-class HymenopteraDataset(data.Dataset):
+class PlantDataset(data.Dataset):
     """
     アリとハチの画像のDatasetクラス。PyTorchのDatasetクラスを継承。
 
