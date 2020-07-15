@@ -114,7 +114,7 @@ class PlantDataset(data.Dataset):
             img, self.phase)  # torch.Size([3, 224, 224])
 
         # 画像のラベルをファイル名から抜き出す
-        label = img_path.split("/")[4]
+        label = img_path.split("/")[3]
 
         # ラベルを数値に変更する
 
