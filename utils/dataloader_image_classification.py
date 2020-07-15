@@ -65,7 +65,7 @@ def make_datapath_list(phase="train"):
     """
 
     rootpath = "./CLS/"
-    target_path = osp.join(rootpath+phase+'/**/*.jpg')
+    target_path = osp.join(rootpath+phase+'/**/*.png')
     print(target_path)
 
     path_list = []  # ここに格納する
