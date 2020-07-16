@@ -3,6 +3,7 @@ import os.path as osp
 import torch.utils.data as data
 from torchvision import models, transforms
 from PIL import Image
+from skimage.io import imread
 
 
 class ImageTransform():
@@ -107,7 +108,7 @@ class PlantDataset(data.Dataset):
 
         # index番目の画像をロード
         img_path = self.file_list[index]
-        img = Image.open(img_path)  # [高さ][幅][色RGB]
+        img = Image.fromarray(imread(img_path)[:,:,:3])  # [高さ][幅][色RGB]※たまにRGBが4列のデータあり、3列に整える
 
         # 画像の前処理を実施
         img_transformed = self.transform(
